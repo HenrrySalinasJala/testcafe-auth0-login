@@ -1,6 +1,6 @@
 # testcafe-auth0-login
 
-This repo gives a workaround regarding the limitations with testcafe when it comes to test pages with multiple top level origins. Based on a great overview of [Sandrino Di Mattia](https://sandrino.dev/blog/writing-cypress-e2e-tests-with-auth0) about the mechanisms of doing automated testing on apps that use Authentication as a Service such as [Auth0](https://auth0.com/) that affects Cypress, Testcafe and perhaps other E2E test tools. This script mainly addresses an infinite redirection behavior caused by a proxied localStorage not being picked up properly by testcafe-hummerhead as it was set on a [cross-domain](https://stackoverflow.com/questions/33957477/cross-domain-localstorage-with-javascript) page ([Universal Login](https://auth0.com/docs/login/universal-login)) whenever test is run via testcafe.
+This repo gives a workaround regarding the limitations with testcafe when it comes to test pages with multiple top level origins. Based on a great overview of [Sandrino Di Mattia](https://sandrino.dev/blog/writing-cypress-e2e-tests-with-auth0) about the mechanisms of doing automated testing on apps that use Authentication as a Service tools such as [Auth0](https://auth0.com/). This script mainly addresses an infinite redirection behavior caused by a proxied localStorage not being picked up properly by testcafe-hummerhead as it was set on a [cross-domain](https://stackoverflow.com/questions/33957477/cross-domain-localstorage-with-javascript) page using ([Universal Login](https://auth0.com/docs/login/universal-login)) whenever test is run via testcafe.
 
 ## How to run it?
 
@@ -8,7 +8,7 @@ This repo gives a workaround regarding the limitations with testcafe when it com
 
 Needs to set required variables on `.env` 
 
-## Example
+### Example
 
 Run the following command to execute test
 
@@ -17,7 +17,7 @@ npm run test
 ```
 
 
-## Workaround
+## How it works
 
 In order to overcome the cross-domain issues we mock the Universal Login, set a session programmatically in the localStorage and load the actual application on a different tab:
 
