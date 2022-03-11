@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "simple test with testcafe for auth0 login",
   "scripts": {
-    "test": "npx testcafe chrome authentication_test.js --skip-js-errors --assertion-timeout=200000 --selector-timeout=25000"
+    "test": "npx testcafe chrome login_test.js --skip-js-errors --assertion-timeout=200000 --selector-timeout=25000"
   },
   "author": "es.henrry@gmail.com",
   "license": "ISC",
