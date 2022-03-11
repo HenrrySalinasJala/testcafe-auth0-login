@@ -8,6 +8,17 @@ This repo gives a workaround regarding the limitations with testcafe when it com
 
 Needs to set required variables on `.env` 
 
+```sh
+AUTH0_DOMAIN = <AUTH0_DOMAIN>
+CLIENT_ID = <CLIENT_ID>
+USERNAME = <USERNAME>
+PASSWORD = <PASSWORD>
+CALLBACK_URL = <CALLBACK_URL>
+AUDIENCE = <AUDIENCE>
+SCOPE = <SCOPE>
+PROTECTED_URL = <PROTECTED_URL>
+```
+
 ### Example
 
 Run the following command to execute test
